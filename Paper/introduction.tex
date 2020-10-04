@@ -1,0 +1,16 @@
+\section{Introduction}
+
+Most games and environments developed with the intention of teaching computer programming concepts do so by requiring the student to either learn an existing programming language (e.g. Java \cite{Robocode}, Python \cite{CodeWars,CheckIO} or JavaScript \cite{CodeCombat,CheckIO,Codingame}) or a language specific to the learning environment (e.g. Scratch \cite{Scratch} or Alice \cite{Alice}). If the goal is to teach the fundamental concepts of computer programming, this requirement can result in a situation where the learner feels intimidated, confused or frustrated when their ``program'' does not work correctly. Also, as Bromwich et al. noted, many of these educational programming languages and environments are ``often ambitious in what they are trying to teach beginning programmers. They even go as far as to try teaching concurrency, something with which even advanced programmers often have difficulty.'' \cite{Bromwich2012}.
+
+Also, such learning games and environments commonly use either a puzzle-solving premise, such as navigating a maze, or a sandbox paradigm, where a learner can utilize the language in an open-ended manner. As puzzle-solving activities tend to favour a specific demographic \cite{Phan2012}, and the sandbox paradigm requires oversight by an outside influence (i.e. an instructor) to ensure learning progression \cite{Bromwich2012}, both approaches have significant drawbacks.    
+
+\gameNameNS
+%\footnote{https://github.com/SibylLab/program-wars}
+\footnote{Project repository URL removed for blind-review.} 
+was created to address these concerns by providing a web-based card game that teaches or reinforces the fundamental concepts of programming and cybersecurity to those with limited or no programming or computer security experience \cite{anvikPW}. Players use various cards to create a program that executes a target number of instructions while launching cyberattacks against opponents and using representations of cybersecurity tools to defend themselves. Players are awarded additional points according to how they construct their program.
+
+Several limitations and areas for improvement were identified for the initial version of \gameName following both formal \cite{anvikPW} and informal observations and discussions with players. The specific limitations identified included: confusion regarding the concept of method/function/procedure, the overgeneralization of cyberattacks, and frustration due to the randomness of the ``conditional statement" game mechanic.
+
+This paper presents a redesign of \gameName which addresses these limitations, resulting in \pwTwoNS, a version which we believe better communicates the principles of functional decomposition, conditional statements, and real-world cybersecurity concepts. Also, \pwTwo introduces learners to two key classes of algorithms: searching and sorting.
+
+The paper proceeds by presenting a survey of card or board games whose intent is similar to that of \gameName, followed by a description of the gameplay and cards found in \pwTwoNS.
