@@ -1,0 +1,95 @@
+\section{Game Cards}
+The player builds their program using the basic building blocks of instructions, methods and repetition. Also, on their turn, a player can launch a cyberattack at an opponent or prepare their defence. This section describes each of the computer programming, cyberattack and cybersecurity cards in the game.
+
+\subsection{Computer Programming}
+In \pwOne the majority of cards focused on computer programming concepts, and most of these cards carry over into \pwThree. 
+
+\paragraph{\Ins, \R and \Vns:}As in actual computer programs, instructions form the backbone of the program. The \I card represents a fixed number of instructions (1, 2, or 3) and the player uses this type of card as the basis for gaining points in the game. Players can then use the \R card, which represents the concept of a loop, to further increase the overall number of instructions in their program. There are three sizes of \R cards: 2, 3, and 4. By placing a \R card on another \R card, the player can form a nested loop.\footnote{\gameName only allows nesting up to two levels to reduce the gameplay complexity and to keep scores from growing too quickly.} In addition to the fixed-size \R cards, there is also a variable \R card (called \Rxns). By itself, this card acts as a \Rns-1 card. However, the player can place a \V card on a \Rx to increases its multiplicative power. \V cards have values of 3, 4, 5 and 6. 
+
+%Figure \ref{fig:game} shows the example where a \M card, \R card and \V card are used.
+
+\paragraph{\Mns:}
+In \pwOneNS, the \Gr card represented the concept of a procedure, function or method in a programming language. However, the user study of \pwOne showed this card to be ineffective in conveying this concept. \pwThree\\ replaces the \Gr card with the \M card to address this problem.
+
+The \M card acts as a proxy for the contents of the \MS area, with the player's total score being adjusted accordingly. If a new card is added to the \MS area, the player's score will be adjusted according to the number of \M cards in the \Play area.
+As with \I cards, the player can use \R and \V cards to increase the effect of a \M card. 
+
+\subsection{Malware}
+\label{section:malware}
+
+\pwOne represented the malware cyberthreat with a single \Mal card. In \pwThree, the \Mal card is replaced with cards that more directly represent four of the most common types of malware: \Spyns, \Ranns, \Vi and \Trjns. 
+
+Spyware is used to gather and send information to another party without the target’s consent. The \Spy card represents this same situation in the context of the game. Ransomware is used for collecting a specific points from the targeted player. The \Vi card is used to reduce the effect of a stack of cards in the \Play area by reducing the points of a card stack and the \Trj card is played against an opponent, as a random card in the opponent's hand which replaced with one that mimics it.
+
+\begin{comment}
+
+\paragraph{\Spyns:}
+Spyware is used to gather and send information to another party without the target’s consent. The \Spy card represents this same situation in the context of the game. When a player plays a \Spy card against their opponent, a button labelled ``Spy Hand'' appears beside the opponent's name in the top portion of the screen. Clicking this button allows the attacker to be able to see the affected player's hand. The effect lasts for five turns.
+
+\paragraph{\Ranns:}
+This card's effect reflects the real-world concept of ransomware where an attacker blocks access to a target's files, such as encrypting them, and threatens to publish or delete them unless a ransom is paid. When a player plays a \Ran card on an opponent, the targeted player loses 10 points from their total score and these points are added to the attacker's score. This can result in an opponent's score becoming negative. Unlike real-world ransomware, recovering from this attack is simple, as an affected player can recover their points by either using a \Scan or \Anti card. 
+
+\paragraph{\Vins:}
+A computer virus is a computer program that replicates itself by modifying other programs. The \Vi card is used to reduce the effect of a stack of cards in the \Play area by reducing the points of a card stack. If the stack is built on an \I card, the stack's score becomes 0. If the stack is built on a \M card, the stack's score is reduced by 50\%. This adds additional motivation for the player to use the \M card. This card is the most similar to the \Mal card from \pwOneNS, where the \Mal card reduced a player's total score by 25\%.   
+
+\paragraph{\Trjns:}
+In the real world, a \Trj is a computer program that misleads users as to its real intent. When a \Trj card is played against an opponent, a random card in the opponent's hand is replaced with one that mimics it. While players can see when a \Trj is played on them they cannot tell which card has been mimicked. The actual effect of the mimic card depends on what card is replaced. \I and \M cards add the \Buf effect to the player instead of creating a new stack in the \Play area. \R and \V cards add a \Vi card to the stack where they were added. Cyberattack cards, such as \DoS or \Vins, add a \CSS to the player instead of adding a cyberattack effect to the target opponent. All cybersecurity and algorithm cards add a \Ran to the player instead of activating the expected card.
+
+\end{comment}
+
+\subsection{Hacking}
+\label{section:hacking}
+\pwOne contained a single card, \Hackns, that represented an intrusion into a computer system. The effect of the \Hack card was to remove one of the stacks of cards on an opponent's playfield. \pwThree refines this idea by adding specific cards to represent common ways whereby computer systems are intruded or affected by an intrusion. These four cards provide representations of the effects of four types of system attacks: causing a buffer overflow, cross-site scripting, a denial of service attack (DoS), and injection of malicious SQL code.
+
+The \Buf card prevents an opponent from playing any \Ins, \Rns, \V or \M cards for two turns. The \CSS card stops a player from playing any algorithm or cyberattack cards for two turns. \DoS card prevents a player from redrawing new cards at the end of their turn and finally the \SQL card can be used to slow down the progress of an opponent by reducing the total of the \MS area by two points.
+
+\begin{comment}
+
+\paragraph{\Bufns:}
+A common system attack is to send data to a program such that a memory buffer overflows and cause program instructions to be overwritten by malicious code, which is then run. In \pwTwoNS, the \Buf card prevents an opponent from playing any \Ins, \Rns, \V or \M cards for two turns. During this effect a \emph{Pass} button is added next to the \emph{Redraw} button. This allows a player to skip their turn if they cannot play any cards and do not want to discard one. The concept behind this card's effect is similar to real-world buffer overflow solutions \cite{libsafe, StackGuard}.
+
+\paragraph{\CSSns:}
+Cross-site scripting is a code injection attack. The attack happens when the victim visits a web page or web application that administers the harmful code \cite{Crosssite}. The visited web page or service acts as a carrier to deliver the malicious code to the affected browser. In \pwTwoNS, the \CSS card stops a player from playing any algorithm or cyberattack cards for two turns. This effect also adds a \emph{Pass} button above the \Hand. The concept behind this card is to make a player familiar with this type of attack by preventing the advantages given by algorithm and cyberattack cards.
+
+\paragraph{\DoSns:}
+A Denial of Service (DoS) attack occurs when a computer system connected to a network is intentionally flooded with requests so that the system can no longer handle legitimate requests. In \pwTwoNS, the \DoS card prevents a player from redrawing new cards at the end of their turn. The effect also adds a \emph{Pass} button above the \Hand~ and disables the \emph{Redraw} button. The effect lasts for three turns resulting in the player having fewer cards in their hand to choose from until the effect ends.
+
+\paragraph{\SQLns:}
+In an SQL injection attack, malicious SQL code is entered into a data field such that the code is run on a backend database. The result of such an attack is to obtain information that was not intended to be disclosed or delete and/or corrupt the data in the database. In \pwTwoNS, the \SQL card can be used to slow down the progress of an opponent by reducing the total of the \MS area by two points. The effect lasts until removed by a \Fire or \Scan card. The concept behind this card is that of infiltration of a program's method by malicious code. 
+
+\end{comment}
+
+\subsection{Cyberdefense:}
+\pwOne provided three cards for cyberdefense. Two of the cards were \emph{permanent} cards, meaning that they remained on a player's playfield when played, and were referred to as \emph{Safeties}. The first of these cards was the \Anti card which prevented the \Mal card from being played on a player. The second of these cards was the \Fire card which protected against the \Hack card. The third card was the \Over card, which combated the \Mal card by increasing the player's total score by 25\%. However, it was observed that the \Over effect didn't match well with real-world cybersecurity concepts and was removed in \pwThree.  
+
+\pwThree continues the use of the two safety cards, \Anti and \Firens, and adds a new one-time-use cyberdefense card called \Scanns. 
+
+The \Scan card represents the action of a user explicitly scanning all of their files to find any infected items using an antivirus tool. The \Anti card reflects this real-world tool by protecting a player from the effect of any of the malware attack cards. \Fire card prevent hack cards being played on the player.
+
+\begin{comment}
+
+\paragraph{\Scanns:}
+The \Scan card represents the action of a user explicitly scanning all of their files to find any infected items using an antivirus tool. If the player is under the influence of either a malware or a hack card, then the \Scan card allows the players to choose a single effect to remove. If the player is not under the influence of a cyberattack card, the effect is saved until the player is attacked, at which time the cyberattack is neutralized and the \Scan effect is removed. 
+
+\paragraph{\Antins:}
+An antivirus program is a program or set of programs designed to prevent, search for, detect, and remove malware from a computer system. The \Anti card reflects this real-world tool by protecting a player from the effect of any of the malware attack cards. If the player is already under the effect of one or more malware cards, all of the effects are removed when this card is played. Unlike the \Scan card, the effect of this card is permanent once it is played, thereby protecting the player from any future malware card attacks. 
+
+\paragraph{\Firens:}
+A firewall is a network security device that controls incoming and outgoing network traffic and grants or prevents data packets based on a set of security rules, thereby protecting a computer system from various intrusion attacks. Like the \Anti card, the \Fire card reflects this real-world tool by preventing hack cards from being played on the player. Similar to the \Anti card, if the player is affected by any hack cards, these effects are removed. The effect of this card is also permanent once played.
+
+\end{comment}
+
+\subsection{Algorithms/Library Functions:}
+The use of algorithms, often from libraries, is an essential part of computer programming. Two key categories of algorithms are searching and sorting, and both of these are introduced in \pwThree.
+
+The \Sort card allows a player to rearrange the top five (5) cards of the deck into whatever order they choose and the \Ser card allows a player to search for a specific card within the top ten (10) cards of the deck.
+
+\begin{comment}
+
+\paragraph{\Sortns:}
+Sorting is the arrangement of items into an ordered sequence. In \pwTwoNS, the \Sort card allows a player to rearrange the top five (5) cards of the deck into whatever order they choose. This allows a player to control what cards players will draw for the next five turns, three cards for the player, and two for their opponent. When the card is played, an overlay is opened showing the top five cards and the player can drag and drop cards to reorder them.
+
+\paragraph{\Serns:}
+Searching is the process of locating a particular element in a given set of elements. In \pwTwoNS, the \Ser card allows a player to search for a specific card within the top ten (10) cards of the deck. Playing the card results in an overlay being opened that shows these cards and the player selects one to immediately put into their hand for their next turn.
+
+\end{comment}
